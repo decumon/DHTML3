@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style1.css">
+    <title>Первое задание</title>
+</head>
+<body>
+    <div><img src="img/1.png" alt=""></div>
+    <label for="" id="label1"></label>
+</body>
+
+<script>
+    const date = new Date();
+    const options = { weekday: 'long' };
+    const dayOfWeek = date.toLocaleString('en-US', options);
+    let labelText=document.getElementById("label1")
+
+    switch(dayOfWeek){
+        case 'Monday':
+        {
+            labelText.textContent="Понедельник  - день дистанта"
+            break
+        }
+        case 'Tuesday':
+        {
+            labelText.textContent="Вторник - выходной (военка)"
+            break
+        }
+        case 'Wednesday':
+        {
+            labelText.textContent="Среда :( надо на учебу"
+            break
+        }
+        case 'Thursday':
+        {
+            labelText.textContent="Чт - лучший день, день Интернет-программирования!"
+            break
+        }
+        case 'Friday':
+        {
+            labelText.textContent="Пятница развратница я хз"
+            break
+        }
+        case 'Saturday':
+        {
+            labelText.textContent="А мы учимся по субботам("
+            break
+        }
+        case 'Sunday':
+        {
+            labelText.textContent="Ура вс"
+            break
+        }
+    }
+    
+</script>
+</html>

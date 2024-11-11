@@ -1,0 +1,54 @@
+body{
+    min-height:  93vh;
+    background: rgb(202, 147, 202);
+    color: rgb(206, 245, 99);
+}
+
+body>div{
+    display: flex;
+    flex-grow: 1    ;
+    justify-content: center;
+    align-items: center;
+    margin: 15px;
+}
+
+label{
+    display: flex;    
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+}
+
+input{
+    width: 230px;   
+}
+
+/* content>div{
+    display: flex;    
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+} */
+
+content>.input{
+    display: flex;
+    flex-direction: row;
+}
+
+content>.input>div{
+    display: flex;    
+    flex-direction: row;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+}
+
+.label{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.label>div{
+    margin: 35px;
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style3.css">
+    <div><img src="img/3.png" alt=""></div>
+    <title>Третье задание</title>
+</head>
+<body>
+    <content>
+        <div class="input">
+            <div><input type="text" name="" id="text1" value="Шалаш"></div>
+            <div> <input type="text" name="" id="text2" value="Интернет-программирование"></div>
+            <div> <input type="text" name="" id="text3" value="Совенок"></div>
+        </div>
+        <div class="label">
+            <div> <label for="" id="label1"></label></div>
+            <div> <label for="" id="label2"></label></div>
+            <div> <label for="" id="label3"></label></div>
+         </div>
+    </content>
+
+    <script>
+        function reverse(str){
+            let str2="";
+            for(let i=str.length-1; i>=0; i--){
+             str2+=str[i];
+            }
+            return str2;
+        }
+
+        document.getElementById("label1").textContent=reverse(document.getElementById("text1").value)
+        document.getElementById("label2").textContent=reverse(document.getElementById("text2").value)
+        document.getElementById("label3").textContent=reverse(document.getElementById("text3").value)
+
+        document.getElementById('text1').onchange=function(){
+            document.getElementById("label1").textContent=reverse(document.getElementById("text1").value)
+        }
+        document.getElementById('text2').onchange=function(){
+            document.getElementById("label2").textContent=reverse(document.getElementById("text2").value)
+        }
+        document.getElementById('text3').onchange=function(){
+            document.getElementById("label3").textContent=reverse(document.getElementById("text3").value)
+        }
+    </script>
+</body>
+</html>

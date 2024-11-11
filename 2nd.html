@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style2.css">
+    <title>Второе задание</title>
+</head>
+<body>
+    <div><img src="img/2.png" alt=""></div> 
+    <div> <input type="text" id="text1" value="HeLLo WOrld"></div>
+    <label for="" id="label1"></label>
+</body>
+<script>
+    function fixUpperCasePairs(str) {
+  let result = '';
+  let i = 0;
+  for (i; i <= str.length - 2;) {   
+    if ((str[i] === str[i].toUpperCase()) && (str[i + 1] === str[i + 1].toUpperCase()) && str[i]!=" ") {
+      result += str[i] + str[i + 1].toLowerCase();
+      i+=2;
+    } else {
+      result += str[i];     
+      i++
+    }
+  }
+  if(str[i]==str[str.length-1])
+    result += str[i];
+
+  return result;
+}
+
+// Пример использования
+pass_gen(15)
+function pass_gen(len) {
+        chrs = 'abdehkmnpswxzABDEFGHKMNPQRSTWXZ';
+        let abc = '';
+        for (let i = 0; i < len; i++) {
+            let pos = Math.floor(Math.random() * chrs.length);
+            abc += chrs.substring(pos,pos+1);
+        }
+        document.getElementById('text1').value=abc
+    return abc;
+    }
+
+document.getElementById('text1').onchange=function(){
+    document.getElementById("label1").textContent=fixUpperCasePairs(document.getElementById("text1").value)
+}
+document.getElementById("label1").textContent=fixUpperCasePairs(document.getElementById("text1").value)
+    console.log(fixUpperCasePairs("HEllo World"));
+</script>
+</html>
